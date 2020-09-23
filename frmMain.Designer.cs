@@ -33,6 +33,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pbRolledDice5 = new System.Windows.Forms.PictureBox();
+            this.pbRolledDice4 = new System.Windows.Forms.PictureBox();
+            this.pbRolledDice3 = new System.Windows.Forms.PictureBox();
+            this.pbRolledDice2 = new System.Windows.Forms.PictureBox();
+            this.pbRolledDice1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pbSavedDice5 = new System.Windows.Forms.PictureBox();
@@ -50,14 +55,14 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRolledDice5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRolledDice4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRolledDice3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRolledDice2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRolledDice1)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbSavedDice5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSavedDice4)).BeginInit();
@@ -67,11 +72,6 @@
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -116,21 +116,86 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Controls.Add(this.pictureBox3);
-            this.panel2.Controls.Add(this.pictureBox4);
-            this.panel2.Controls.Add(this.pictureBox5);
+            this.panel2.Controls.Add(this.pbRolledDice5);
+            this.panel2.Controls.Add(this.pbRolledDice4);
+            this.panel2.Controls.Add(this.pbRolledDice3);
+            this.panel2.Controls.Add(this.pbRolledDice2);
+            this.panel2.Controls.Add(this.pbRolledDice1);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(168, 3);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(301, 94);
             this.panel2.TabIndex = 1;
+            // 
+            // pbRolledDice5
+            // 
+            this.pbRolledDice5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbRolledDice5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbRolledDice5.Image = ((System.Drawing.Image)(resources.GetObject("pbRolledDice5.Image")));
+            this.pbRolledDice5.Location = new System.Drawing.Point(240, 25);
+            this.pbRolledDice5.Name = "pbRolledDice5";
+            this.pbRolledDice5.Size = new System.Drawing.Size(50, 52);
+            this.pbRolledDice5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbRolledDice5.TabIndex = 14;
+            this.pbRolledDice5.TabStop = false;
+            this.pbRolledDice5.DoubleClick += new System.EventHandler(this.moveDiceToSaved);
+            // 
+            // pbRolledDice4
+            // 
+            this.pbRolledDice4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbRolledDice4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbRolledDice4.Image = ((System.Drawing.Image)(resources.GetObject("pbRolledDice4.Image")));
+            this.pbRolledDice4.Location = new System.Drawing.Point(183, 25);
+            this.pbRolledDice4.Name = "pbRolledDice4";
+            this.pbRolledDice4.Size = new System.Drawing.Size(50, 52);
+            this.pbRolledDice4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbRolledDice4.TabIndex = 13;
+            this.pbRolledDice4.TabStop = false;
+            this.pbRolledDice4.DoubleClick += new System.EventHandler(this.moveDiceToSaved);
+            // 
+            // pbRolledDice3
+            // 
+            this.pbRolledDice3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbRolledDice3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbRolledDice3.Image = ((System.Drawing.Image)(resources.GetObject("pbRolledDice3.Image")));
+            this.pbRolledDice3.Location = new System.Drawing.Point(126, 25);
+            this.pbRolledDice3.Name = "pbRolledDice3";
+            this.pbRolledDice3.Size = new System.Drawing.Size(50, 52);
+            this.pbRolledDice3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbRolledDice3.TabIndex = 12;
+            this.pbRolledDice3.TabStop = false;
+            this.pbRolledDice3.DoubleClick += new System.EventHandler(this.moveDiceToSaved);
+            // 
+            // pbRolledDice2
+            // 
+            this.pbRolledDice2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbRolledDice2.Image = ((System.Drawing.Image)(resources.GetObject("pbRolledDice2.Image")));
+            this.pbRolledDice2.Location = new System.Drawing.Point(69, 25);
+            this.pbRolledDice2.Name = "pbRolledDice2";
+            this.pbRolledDice2.Size = new System.Drawing.Size(50, 52);
+            this.pbRolledDice2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbRolledDice2.TabIndex = 11;
+            this.pbRolledDice2.TabStop = false;
+            this.pbRolledDice2.DoubleClick += new System.EventHandler(this.moveDiceToSaved);
+            // 
+            // pbRolledDice1
+            // 
+            this.pbRolledDice1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbRolledDice1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbRolledDice1.Image = ((System.Drawing.Image)(resources.GetObject("pbRolledDice1.Image")));
+            this.pbRolledDice1.Location = new System.Drawing.Point(12, 25);
+            this.pbRolledDice1.Name = "pbRolledDice1";
+            this.pbRolledDice1.Size = new System.Drawing.Size(50, 52);
+            this.pbRolledDice1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbRolledDice1.TabIndex = 10;
+            this.pbRolledDice1.TabStop = false;
+            this.pbRolledDice1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DiceMouseDown);
             // 
             // label1
             // 
@@ -159,51 +224,61 @@
             // pbSavedDice5
             // 
             this.pbSavedDice5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbSavedDice5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbSavedDice5.Location = new System.Drawing.Point(240, 25);
             this.pbSavedDice5.Name = "pbSavedDice5";
             this.pbSavedDice5.Size = new System.Drawing.Size(50, 52);
             this.pbSavedDice5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbSavedDice5.TabIndex = 9;
             this.pbSavedDice5.TabStop = false;
+            this.pbSavedDice5.DoubleClick += new System.EventHandler(this.moveDiceToRolled);
             // 
             // pbSavedDice4
             // 
             this.pbSavedDice4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbSavedDice4.Location = new System.Drawing.Point(180, 25);
+            this.pbSavedDice4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbSavedDice4.Location = new System.Drawing.Point(183, 25);
             this.pbSavedDice4.Name = "pbSavedDice4";
             this.pbSavedDice4.Size = new System.Drawing.Size(50, 52);
             this.pbSavedDice4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbSavedDice4.TabIndex = 8;
             this.pbSavedDice4.TabStop = false;
+            this.pbSavedDice4.DoubleClick += new System.EventHandler(this.moveDiceToRolled);
             // 
             // pbSavedDice3
             // 
             this.pbSavedDice3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbSavedDice3.Location = new System.Drawing.Point(124, 25);
+            this.pbSavedDice3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbSavedDice3.Location = new System.Drawing.Point(126, 25);
             this.pbSavedDice3.Name = "pbSavedDice3";
             this.pbSavedDice3.Size = new System.Drawing.Size(50, 52);
             this.pbSavedDice3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbSavedDice3.TabIndex = 7;
             this.pbSavedDice3.TabStop = false;
+            this.pbSavedDice3.DoubleClick += new System.EventHandler(this.moveDiceToRolled);
             // 
             // pbSavedDice2
             // 
-            this.pbSavedDice2.Location = new System.Drawing.Point(68, 25);
+            this.pbSavedDice2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbSavedDice2.Location = new System.Drawing.Point(69, 25);
             this.pbSavedDice2.Name = "pbSavedDice2";
             this.pbSavedDice2.Size = new System.Drawing.Size(50, 52);
             this.pbSavedDice2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbSavedDice2.TabIndex = 6;
             this.pbSavedDice2.TabStop = false;
+            this.pbSavedDice2.DoubleClick += new System.EventHandler(this.moveDiceToRolled);
             // 
             // pbSavedDice1
             // 
             this.pbSavedDice1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbSavedDice1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbSavedDice1.Location = new System.Drawing.Point(12, 25);
             this.pbSavedDice1.Name = "pbSavedDice1";
             this.pbSavedDice1.Size = new System.Drawing.Size(50, 52);
             this.pbSavedDice1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbSavedDice1.TabIndex = 5;
             this.pbSavedDice1.TabStop = false;
+            this.pbSavedDice1.DoubleClick += new System.EventHandler(this.moveDiceToRolled);
             // 
             // label2
             // 
@@ -287,65 +362,6 @@
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(240, 25);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 52);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.DoubleClick += new System.EventHandler(this.pictureBox_DoubleClick);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(180, 25);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(50, 52);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 13;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.DoubleClick += new System.EventHandler(this.pictureBox_DoubleClick);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(124, 25);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(50, 52);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 12;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.DoubleClick += new System.EventHandler(this.pictureBox_DoubleClick);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(68, 25);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(50, 52);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 11;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.DoubleClick += new System.EventHandler(this.pictureBox_DoubleClick);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(12, 25);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(50, 52);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 10;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.DoubleClick += new System.EventHandler(this.pictureBox_DoubleClick);
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -358,10 +374,16 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMain";
             this.Text = "Yatzy";
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRolledDice5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRolledDice4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRolledDice3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRolledDice2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRolledDice1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbSavedDice5)).EndInit();
@@ -375,11 +397,6 @@
             this.panel5.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -408,11 +425,11 @@
         private System.Windows.Forms.PictureBox pbSavedDice5;
         private System.Windows.Forms.PictureBox pbSavedDice4;
         private System.Windows.Forms.PictureBox pbSavedDice3;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pbRolledDice5;
+        private System.Windows.Forms.PictureBox pbRolledDice4;
+        private System.Windows.Forms.PictureBox pbRolledDice3;
+        private System.Windows.Forms.PictureBox pbRolledDice2;
+        private System.Windows.Forms.PictureBox pbRolledDice1;
     }
 }
 

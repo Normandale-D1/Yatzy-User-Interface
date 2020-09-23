@@ -91,9 +91,10 @@ namespace Yatzy
             PictureBox p = (PictureBox)sender;
             if (p.Image == null)
             {
+                draggedPicture.Image = null;
                 p.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap, true);
             }
-            draggedPicture.Image = null;
+
         }
         private void DiceDragEnter(object sender, DragEventArgs e)
         {

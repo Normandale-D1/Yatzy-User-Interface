@@ -74,12 +74,12 @@ namespace Yatzy
 
         }
 
-        private void DiceMouseDown(object sender, MouseEventArgs e)
+        private void DiceMouseMoved(object sender, MouseEventArgs e)
         {
             PictureBox p = (PictureBox)sender;
 
             // Start the drag if it's the right mouse button.
-            if (e.Button == MouseButtons.Right && p.Image != null)
+            if (e.Button == MouseButtons.Left && p.Image != null)
             {
                 draggedPicture = p;
                 p.DoDragDrop(p.Image,
@@ -120,16 +120,18 @@ namespace Yatzy
             foreach (PictureBox pb in savedDice)
             {
                 pb.AllowDrop = true;
-                pb.MouseDown += DiceMouseDown;
+                pb.DoubleClick += moveDiceToRolled;
+                pb.MouseMove += DiceMouseMoved;
                 pb.DragEnter += DiceDragEnter;
                 pb.DragDrop += DiceDragDrop;
             }
             foreach (PictureBox pb in rolledDice)
             {
                 pb.AllowDrop = true;
-                pb.MouseDown += DiceMouseDown;
+                pb.DoubleClick += moveDiceToSaved;
+                pb.MouseMove += DiceMouseMoved;
                 pb.DragEnter += DiceDragEnter;
-                pb.DragDrop += DiceDragDrop;
+                pb.DragDrop += DiceDragDrop; 
             }
 
             Assembly myAssembly = Assembly.GetExecutingAssembly();
@@ -160,6 +162,10 @@ namespace Yatzy
 
         }
 
+        private void pbRolledDice2_MouseMove(object sender, MouseEventArgs e)
+        {
+
+        }
     }
 }
 

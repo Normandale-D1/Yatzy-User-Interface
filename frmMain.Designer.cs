@@ -144,7 +144,6 @@
             this.pbRolledDice5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbRolledDice5.TabIndex = 14;
             this.pbRolledDice5.TabStop = false;
-            this.pbRolledDice5.DoubleClick += new System.EventHandler(this.moveDiceToSaved);
             // 
             // pbRolledDice4
             // 
@@ -157,7 +156,6 @@
             this.pbRolledDice4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbRolledDice4.TabIndex = 13;
             this.pbRolledDice4.TabStop = false;
-            this.pbRolledDice4.DoubleClick += new System.EventHandler(this.moveDiceToSaved);
             // 
             // pbRolledDice3
             // 
@@ -170,7 +168,6 @@
             this.pbRolledDice3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbRolledDice3.TabIndex = 12;
             this.pbRolledDice3.TabStop = false;
-            this.pbRolledDice3.DoubleClick += new System.EventHandler(this.moveDiceToSaved);
             // 
             // pbRolledDice2
             // 
@@ -182,7 +179,6 @@
             this.pbRolledDice2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbRolledDice2.TabIndex = 11;
             this.pbRolledDice2.TabStop = false;
-            this.pbRolledDice2.DoubleClick += new System.EventHandler(this.moveDiceToSaved);
             // 
             // pbRolledDice1
             // 
@@ -195,7 +191,6 @@
             this.pbRolledDice1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbRolledDice1.TabIndex = 10;
             this.pbRolledDice1.TabStop = false;
-            this.pbRolledDice1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DiceMouseDown);
             // 
             // label1
             // 
@@ -231,7 +226,6 @@
             this.pbSavedDice5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbSavedDice5.TabIndex = 9;
             this.pbSavedDice5.TabStop = false;
-            this.pbSavedDice5.DoubleClick += new System.EventHandler(this.moveDiceToRolled);
             // 
             // pbSavedDice4
             // 
@@ -243,7 +237,6 @@
             this.pbSavedDice4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbSavedDice4.TabIndex = 8;
             this.pbSavedDice4.TabStop = false;
-            this.pbSavedDice4.DoubleClick += new System.EventHandler(this.moveDiceToRolled);
             // 
             // pbSavedDice3
             // 
@@ -255,7 +248,6 @@
             this.pbSavedDice3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbSavedDice3.TabIndex = 7;
             this.pbSavedDice3.TabStop = false;
-            this.pbSavedDice3.DoubleClick += new System.EventHandler(this.moveDiceToRolled);
             // 
             // pbSavedDice2
             // 
@@ -266,7 +258,6 @@
             this.pbSavedDice2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbSavedDice2.TabIndex = 6;
             this.pbSavedDice2.TabStop = false;
-            this.pbSavedDice2.DoubleClick += new System.EventHandler(this.moveDiceToRolled);
             // 
             // pbSavedDice1
             // 
@@ -278,7 +269,6 @@
             this.pbSavedDice1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbSavedDice1.TabIndex = 5;
             this.pbSavedDice1.TabStop = false;
-            this.pbSavedDice1.DoubleClick += new System.EventHandler(this.moveDiceToRolled);
             // 
             // label2
             // 

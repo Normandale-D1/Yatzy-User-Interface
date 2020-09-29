@@ -75,15 +75,18 @@ namespace Yatzy
         }
 
         private void DiceMouseMoved(object sender, MouseEventArgs e)
-        {
-            PictureBox p = (PictureBox)sender;
-
+        {           
             // Start the drag if it's the right mouse button.
-            if (e.Button == MouseButtons.Left && p.Image != null)
+            if (e.Button == MouseButtons.Left)
             {
-                draggedPicture = p;
-                p.DoDragDrop(p.Image,
-                    DragDropEffects.Copy);
+                PictureBox p = (PictureBox)sender;
+                if (p.Image != null)
+                {
+                    draggedPicture = p;
+                    p.DoDragDrop(p.Image,
+                        DragDropEffects.Copy);
+                }
+
             }
         }
         private void DiceDragDrop(object sender, DragEventArgs e)
@@ -91,20 +94,22 @@ namespace Yatzy
             PictureBox p = (PictureBox)sender;
             if (p.Image == null)
             {
-                draggedPicture.Image = null;
                 p.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap, true);
+                draggedPicture.Image = null;
             }
-
         }
         private void DiceDragEnter(object sender, DragEventArgs e)
         {
                // See if this is a copy and the data includes an image.
-                if (e.Data.GetDataPresent(DataFormats.Bitmap) &&
-                (e.AllowedEffect & DragDropEffects.Copy) != 0)
+                if (e.Data.GetDataPresent(DataFormats.Bitmap) && (e.AllowedEffect & DragDropEffects.Copy) != 0)
+                {
+                PictureBox p = (PictureBox)sender;
+                if (p.Image == null)
                 {
                     // Allow this.
                     e.Effect = DragDropEffects.Copy;
                 }
+            }
                 else
                 {
                     // Don't allow any other drop.
@@ -159,11 +164,6 @@ namespace Yatzy
             myStream = myAssembly.GetManifestResourceStream("Yatzy.Properties.Dice6.jpg");
             bmp = new Bitmap(myStream);
             diceImages[5] = bmp;
-
-        }
-
-        private void pbRolledDice2_MouseMove(object sender, MouseEventArgs e)
-        {
 
         }
     }

@@ -9,11 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Reflection;
+using YatzyPlayer;
 
 namespace Yatzy
 {
     public partial class frmMain : Form
     {
+        Player gamePlayer;
         PictureBox[] savedDice = new PictureBox[5];
         PictureBox[] rolledDice = new PictureBox[5];
         PictureBox draggedPicture = new PictureBox();
@@ -165,6 +167,14 @@ namespace Yatzy
             bmp = new Bitmap(myStream);
             diceImages[5] = bmp;
 
+        }
+
+        private void btnStartGame_Click(object sender, EventArgs e)
+        {
+            if (!String.IsNullOrEmpty(tbPlayer1.Text))
+            {
+                Player player1 = new Player(tbPlayer1.Text);
+            }
         }
     }
 }

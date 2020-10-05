@@ -47,6 +47,7 @@
             this.pbSavedDice1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.tbPlayer1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -55,7 +56,7 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.tbPlayer1 = new System.Windows.Forms.TextBox();
+            this.btnRollDice = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -101,6 +102,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnRollDice);
             this.panel1.Controls.Add(this.btnStartGame);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(18, 3);
@@ -292,6 +294,13 @@
             this.panel4.Size = new System.Drawing.Size(301, 290);
             this.panel4.TabIndex = 3;
             // 
+            // tbPlayer1
+            // 
+            this.tbPlayer1.Location = new System.Drawing.Point(85, 9);
+            this.tbPlayer1.Name = "tbPlayer1";
+            this.tbPlayer1.Size = new System.Drawing.Size(100, 20);
+            this.tbPlayer1.TabIndex = 1;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -354,12 +363,15 @@
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // tbPlayer1
+            // btnRollDice
             // 
-            this.tbPlayer1.Location = new System.Drawing.Point(85, 9);
-            this.tbPlayer1.Name = "tbPlayer1";
-            this.tbPlayer1.Size = new System.Drawing.Size(100, 20);
-            this.tbPlayer1.TabIndex = 1;
+            this.btnRollDice.Location = new System.Drawing.Point(0, 47);
+            this.btnRollDice.Name = "btnRollDice";
+            this.btnRollDice.Size = new System.Drawing.Size(124, 31);
+            this.btnRollDice.TabIndex = 1;
+            this.btnRollDice.Text = "&Roll Dice";
+            this.btnRollDice.UseVisualStyleBackColor = true;
+            this.btnRollDice.Click += new System.EventHandler(this.btnRollDice_Click);
             // 
             // frmMain
             // 
@@ -430,6 +442,7 @@
         private System.Windows.Forms.PictureBox pbRolledDice2;
         private System.Windows.Forms.PictureBox pbRolledDice1;
         private System.Windows.Forms.TextBox tbPlayer1;
+        private System.Windows.Forms.Button btnRollDice;
     }
 }
 

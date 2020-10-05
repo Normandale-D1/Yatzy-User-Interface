@@ -15,7 +15,7 @@ namespace Yatzy
 {
     public partial class frmMain : Form
     {
-        Player gamePlayer;
+        Player player1;
         PictureBox[] savedDice = new PictureBox[5];
         PictureBox[] rolledDice = new PictureBox[5];
         PictureBox draggedPicture = new PictureBox();
@@ -173,7 +173,17 @@ namespace Yatzy
         {
             if (!String.IsNullOrEmpty(tbPlayer1.Text))
             {
-                Player player1 = new Player(tbPlayer1.Text);
+                player1 = new Player(tbPlayer1.Text);
+            }
+        }
+
+        private void btnRollDice_Click(object sender, EventArgs e)
+        {
+            player1.RollDice();
+            for (int i = 0; i < 5; i++)
+            {
+                int imageIndex = player1.RolledDice[i]-1;
+                rolledDice[i].Image = diceImages[imageIndex];
             }
         }
     }

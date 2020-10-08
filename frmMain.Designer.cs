@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnRollDice = new System.Windows.Forms.Button();
             this.btnStartGame = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pbRolledDice5 = new System.Windows.Forms.PictureBox();
@@ -56,7 +57,6 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.btnRollDice = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -111,6 +111,16 @@
             this.panel1.Size = new System.Drawing.Size(144, 242);
             this.panel1.TabIndex = 0;
             // 
+            // btnRollDice
+            // 
+            this.btnRollDice.Location = new System.Drawing.Point(0, 47);
+            this.btnRollDice.Name = "btnRollDice";
+            this.btnRollDice.Size = new System.Drawing.Size(124, 31);
+            this.btnRollDice.TabIndex = 1;
+            this.btnRollDice.Text = "&Roll Dice";
+            this.btnRollDice.UseVisualStyleBackColor = true;
+            this.btnRollDice.Click += new System.EventHandler(this.btnRollDice_Click);
+            // 
             // btnStartGame
             // 
             this.btnStartGame.Location = new System.Drawing.Point(0, 10);
@@ -140,7 +150,6 @@
             // 
             this.pbRolledDice5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbRolledDice5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbRolledDice5.Image = ((System.Drawing.Image)(resources.GetObject("pbRolledDice5.Image")));
             this.pbRolledDice5.Location = new System.Drawing.Point(240, 25);
             this.pbRolledDice5.Name = "pbRolledDice5";
             this.pbRolledDice5.Size = new System.Drawing.Size(50, 52);
@@ -152,7 +161,6 @@
             // 
             this.pbRolledDice4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbRolledDice4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbRolledDice4.Image = ((System.Drawing.Image)(resources.GetObject("pbRolledDice4.Image")));
             this.pbRolledDice4.Location = new System.Drawing.Point(183, 25);
             this.pbRolledDice4.Name = "pbRolledDice4";
             this.pbRolledDice4.Size = new System.Drawing.Size(50, 52);
@@ -164,7 +172,6 @@
             // 
             this.pbRolledDice3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbRolledDice3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbRolledDice3.Image = ((System.Drawing.Image)(resources.GetObject("pbRolledDice3.Image")));
             this.pbRolledDice3.Location = new System.Drawing.Point(126, 25);
             this.pbRolledDice3.Name = "pbRolledDice3";
             this.pbRolledDice3.Size = new System.Drawing.Size(50, 52);
@@ -175,7 +182,6 @@
             // pbRolledDice2
             // 
             this.pbRolledDice2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbRolledDice2.Image = ((System.Drawing.Image)(resources.GetObject("pbRolledDice2.Image")));
             this.pbRolledDice2.Location = new System.Drawing.Point(69, 25);
             this.pbRolledDice2.Name = "pbRolledDice2";
             this.pbRolledDice2.Size = new System.Drawing.Size(50, 52);
@@ -187,7 +193,6 @@
             // 
             this.pbRolledDice1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbRolledDice1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbRolledDice1.Image = ((System.Drawing.Image)(resources.GetObject("pbRolledDice1.Image")));
             this.pbRolledDice1.Location = new System.Drawing.Point(12, 25);
             this.pbRolledDice1.Name = "pbRolledDice1";
             this.pbRolledDice1.Size = new System.Drawing.Size(50, 52);
@@ -362,16 +367,6 @@
             this.statusStrip1.Size = new System.Drawing.Size(800, 22);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
-            // 
-            // btnRollDice
-            // 
-            this.btnRollDice.Location = new System.Drawing.Point(0, 47);
-            this.btnRollDice.Name = "btnRollDice";
-            this.btnRollDice.Size = new System.Drawing.Size(124, 31);
-            this.btnRollDice.TabIndex = 1;
-            this.btnRollDice.Text = "&Roll Dice";
-            this.btnRollDice.UseVisualStyleBackColor = true;
-            this.btnRollDice.Click += new System.EventHandler(this.btnRollDice_Click);
             // 
             // frmMain
             // 
